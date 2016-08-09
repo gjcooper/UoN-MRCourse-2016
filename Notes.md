@@ -24,3 +24,7 @@ Cardio-Pulmanary Fluctuations
 
 * B0 is direction of magnetic field
 * M0 is average direction of alignment of protons within b0
+
+## Logistics etc
+
+* Adding a marker for side of head, neurological/radiological views of head orientation
