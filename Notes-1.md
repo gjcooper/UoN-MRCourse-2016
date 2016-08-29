@@ -52,3 +52,14 @@ Head motion is important
 * Brain activity -> fMRI Image mostly a linear system
 * Stimulation -> Brain activity is non-linear
 * BOLD is slow, averaged out response compared to neuron spikes
+* Impulse Response Function measured to input in linear system means from measurement can calculate input to system
+* In BOLD fMRI this IRF is called the hemodynamic response function (HRF)
+* Different people/populations can have different HRF
+* A point of neural activity evokes a blood flow response about 3mm wide
+* Different regions/different drugs/hormonal state etc can affect HRF
+
+## Takeaway
+
+* 3-4 seconds time resolution
+* 3mm spatial resolution
+* These are fundamental limitations of BOLD fMRI, and are biological/physical limitations (blood flow is slow and broad) rather than scanner limitations
