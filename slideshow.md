@@ -144,6 +144,8 @@ T2\* is used in functional MRI. It is a measure of the component that does not r
 
 * fMRI scanner paradigms are noisy and care needs to be taken with auditory based studies.
 
+* Hardware for MR room needs to be specially designed and is often expensive.
+
 * Each volume is a series of slices acquired at different times - need to control for that in analysis.
 
 * BOLD is an **indirect** measure and has no direct interpretation or units.
@@ -155,6 +157,8 @@ T2\* is used in functional MRI. It is a measure of the component that does not r
 * Twice as many words does not -> twice as much brain activation
 
 * Susceptibility artifact - distortion due to air/fluid/flesh boundaries (sinuses, ear canals - important for auditory lobes)
+
+* Visual stimulus delivery, audio delivery, subject response collection, ...
 
 * BOLD is a relative signal and must be compared between states.
 
@@ -218,6 +222,8 @@ T2\* is used in functional MRI. It is a measure of the component that does not r
 
 * Test every other single possible stimuli?
 
+* Multi-level is both forward + reverse combined
+
 * Train participant on pictures of dogs and cats
 
 * Show them new pictures and based on brain pattern determine what they are looking at.
@@ -273,14 +279,14 @@ T2\* is used in functional MRI. It is a measure of the component that does not r
 .right-column[
 ### Experimental Designs
 
-### 3 Types of measures
+#### 3 Types of measures
 
-* BOLD fMRI amplitude - *Average direct effect of stimulus*
-* *Distributed Pattern Analysis*
-* *Within voxel adaptation*
+* BOLD fMRI amplitude - **Average direct effect of stimulus**
+* **Distributed Pattern Analysis**
+* **Within voxel adaptation**
 
-.center[<img src="resources/carry-measures.png" width=450, height=300>]
-.center[.imlabel[A traditional block design]]
+.center[<img src="resources/carry-measures.png" width=534, height=300>]
+.center[.imlabel[The three types of measures]]
 ]
 ???
 * Increase of amplitude in relation to contrast, particular object/stimulus
@@ -293,6 +299,70 @@ T2\* is used in functional MRI. It is a measure of the component that does not r
 ## fMRI Paradigms
 ]
 .right-column[
+### Experimental Designs
+
+#### Carry over designs
+
+* Both block and naive event-related designs only show direct effects of a stimulus.
+
+* Continuous carry-over designs offer a method to simultaneously and efficiently measure within-voxel adaptation effects and across voxel distributed pattern responses.
+
+* The order of stimuli is serially counterbalanced, with continuous presentation and no stimulus pairing.
+
+* The neural response to a stimulus @ time = sum of mean response, direct effect and influence of prior stimuli
+]
+???
+* Direct effect corresponds to distributed pattern analysis and influence of prior stimulus is within voxel neural adaptation
+
+* Counterbalancing is done using De Bruijn cycles.
+
+* Types of modulatory effects:
+  * Neural adaptation, linear adaptation, has property that it's symmetric
+  * Bias effects, asymmetric
+
+* Application of carry over designs - work well with 2 dimensional arrays of stimuli
+  * Integral (Euclidean) dimensions, not automatically seen as different things (colour = hue + brightness)
+  * Separable (city-block) dimensions seen as different things (colour + shape != anything)
+---
+.left-column[
+## BOLD fMRI
+## Limitations and Considerations
+## fMRI Paradigms
+## Complimentary sequences and clinical uses
+]
+.right-column[
+### Complimentary Sequences and Technologies
+
+* T1, high resolution structural
+
+* DTI, fMRI can be used to assist with DTI analysis
+
+* EEG can be acquired to increase time resolution
+
+* Plus eyetracking, physiological measures, transcranial magnetic stimulation and more
+]
+???
+* Structural image enables you to overlay results on high resolution image to more easily locate regions activated by the task. It also makes normalisation between subjects much more accurate.
+
+* Tractography seed regions can be created in a subject specific way using the results of fMRI data analysis.
+
+* Electroencephalogram can be either acquired separately (harder to correlate data) or silmultaneously (noise from MR in EEG and vice versa)
+---
+.left-column[
+## BOLD fMRI
+## Limitations and Considerations
+## fMRI Paradigms
+## Complimentary sequences and clinical uses
+]
+.right-column[
+### Clinical Uses
+
+* The primary use in a clinical setting is to help assess how risky a particular brain surgery may be.
+
+* Idea is to map the brain for critical functions like verbal, motor , sensory and executive function.
+
+* Assessment of the effects of stroke, tumors etc can also be performed.
+
 ]
 ???
 ---
@@ -300,12 +370,31 @@ template: centred
 ## Final Discussion
 
 .uncentre[
-Blah blah blah
+* Other fMRI techniques and paradigms exist such as Perfusion fMRI and resting state fMRI.
+
+* Data analysis steps and neuroasthetics
+
+* Scanner with larger gradient coil strengths that can change configuration quickly are best for fMRI
+
+* Adding a marker for side of head, neurological/radiological views of head orientation
 ]
+???
+* Perfusion fMRI - Instead of oxygenated/deoxygenated blood flow. Tag protons inflowing to brain (in neck), and after delay readout effect of label in brain. Alternating images with/without tagging to get differences. Differencing removes intrinsic noise. Very good at measuring slow changes in neural signal.
+
+* Resting State fMRI - Used to look at regional interactions in the brain when the subject is not performing an explicit task. Particularly sensitive to physiological noise. 
+
+* Basic data processing steps: Correct for motion (6DOF + covariates to deal with spin history effects etc), Sinc Interpolation to get each volume in same time, Smooth data to increase statistical power , ie reduce multiple comparison (Direct effects), Spatial Normalisation - ie align to std reference frame.
 ---
 template: centred
 ## Thank You
 
 .uncentre[
 You can find me @ ...
+
+* www.gavincooper.net
+
+* @GavinJCooper on twitter
+
+* https://github.com/gjcooper
+
 ]
