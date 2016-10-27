@@ -6,22 +6,20 @@ class: center, middle, inverse
 ---
 ## Who Am I
 
-GAVIN COOPER
+### GAVIN COOPER
 
-Research Academic
+Research Academic with the CBMHR at UoN
 
-Centre for Brain and Mental Health Research
+Been working with MRI data for > 10 years
 
-Faculty of Health
-
-W: https://www.newcastle.edu.au/profile/gavin-cooper
+https://www.newcastle.edu.au/profile/gavin-cooper
 
 ---
 ## Outline
 ### BOLD fMRI
 ### Limitations and Considerations
 ### fMRI Paradigms
-### Complimentary sequences and clinical outcomes
+### Complimentary sequences and clinical uses
 ---
 layout: true
 name: columns
@@ -33,10 +31,10 @@ class: inverse, middle
 .right-column[
 ### The physics
 
-T2\* is used in functional MRI. It is a measure of the component that does not rephase after a 180 degree RF pulse.
+T2\* is used in functional MRI. It is a measure of the component that does not re-phase after a 180 degree RF pulse.
 
 .center[<img src="resources/T2.png" width=600, height=450>]
-.imlabel[T2 & T2\* relaxation processes. Source: [jcmr-online](http://www.jcmr-online.com/content/12/1/71/figure/F4)]
+.center[.imlabel[T2 & T2\* relaxation processes. Source: [jcmr-online](http://www.jcmr-online.com/content/12/1/71/figure/F4)]]
 ]
 ???
 * First RF pulse puts all proton spins in phase.
@@ -52,15 +50,15 @@ T2\* is used in functional MRI. It is a measure of the component that does not r
 
 * One source of these microscopic distortions is blood, which gives gives us BOLD fMRI.
 * BOLD is due to oxygen attached to hemoglobin.
-* The brain efficently delivers oxygenated blood to parts of the brain with a higher energy budget (ie activity), which results in blood vessels increasing in size.
+* The brain efficiently delivers oxygenated blood to parts of the brain with a higher energy budget (i.e. activity), which results in blood vessels increasing in size.
 
 .center[<img src="resources/arteries.png" width=353, height=325>]
-.imlabel[A view of the main arteries from below the brain]
+.center[.imlabel[A view of the main arteries from below the brain]]
 ]
 
 ???
 
-* Oxygenated and deoxygenated hemoglobin have different magnetic properties.
+* Oxygenated and de-oxygenated hemoglobin have different magnetic properties.
 * So we have:
   * Activity
   * Increased blood vessel size
@@ -68,24 +66,241 @@ T2\* is used in functional MRI. It is a measure of the component that does not r
   * Change in magnetic local properties as measured by T2\*
   * Image
 ---
-template: centred
-### Sample Image
-.center[<img src="resources/sample.png" width=650, height=366>]
-.imlabel[A label for the image]
+.left-column[
+## BOLD fMRI
+]
+.right-column[
+### The HRF
+
+* The transforms that take us from brain activity to an image create an approximately linear system.
+* If we know the Impulse Response Function for a linear system it allows us to calculate input to the system from a measurement.
+* In BOLD fMRI this IRF is called the hemodynamic response function (HRF).
+
+.center[<img src="resources/hrf.png" width=315, height=325>]
+.center[.imlabel[The canonical HRF]]
+]
+---
+.left-column[
+## BOLD fMRI
+## Limitations and Considerations
+]
+.right-column[
+### Limitations (the HRF)
+
+* Different people can have different HRF's.
+
+* Different populations can have different HRF's.
+
+* Different regions in the brain can have different HRF's
+
+* Some drugs can affect the HRF
+
+* Hormonal state can affect the HRF
+
+* ...
+]
+???
+* Have to be careful with claims about an individuals person
+
+* Have to do everything possible to match populations with appropriate controls.
+
+* Differences are often subtle.
+
+* Control your samples as much as possible.
+---
+.left-column[
+## BOLD fMRI
+## Limitations and Considerations
+]
+.right-column[
+### Limitations (the BOLD response)
+
+* BOLD is a slow averaged out response compared to neuron spikes. 3-4 seconds of time resolution.
+
+* A point of neural activity in the brain evokes a blood flow response about 3mm wide.
+
+* These are fundamental limitations of BOLD fMRI and are biological in nature rather than scanner limitations.
+
+]
+???
+* 3-4 second time resolution
+* ~3mm spatial resolution
+
+---
+.left-column[
+## BOLD fMRI
+## Limitations and Considerations
+]
+.right-column[
+### Other considerations
+
+* The relationship between stimulation of the participant and brain activity is non-linear
+
+* Many sources of noise:
+  * Head motion
+  * Cardio-Pulmanary Fluctuations
+  * Distortion due to ferro-magnetic substance presence
+  * Susceptibility artifact
+
+* fMRI scanner paradigms are noisy and care needs to be taken with auditory based studies.
+
+* Each volume is a series of slices acquired at different times - need to control for that in analysis.
+
+* BOLD is an **indirect** measure and has no direct interpretation or units.
+
+* BOLD is also an integrated measure, so it is only detectable if there is a bulk change in neural activity.
+
+]
+???
+* Twice as many words does not -> twice as much brain activation
+
+* Susceptibility artifact - distortion due to air/fluid/flesh boundaries (sinuses, ear canals - important for auditory lobes)
+
+* BOLD is a relative signal and must be compared between states.
+
+* Bulk change as opposed to a change in pattern of firing.
+
+---
+.left-column[
+## BOLD fMRI
+## Limitations and Considerations
+## fMRI Paradigms
+]
+.right-column[
+### Types of Neuroimaging Studies
+
+#### Forward Inference
+
+* The brain area that corresponds to an isolated behaviour
+
+* Isolate the behaviour by subtracting conditions.
+
+* Key problem is that all sorts of other things may be included in the subtraction.
+
+* An alternative is parametric manipulation.
+
+]
+???
+
+* i.e. Brain area for love
+
+* Subtract images of friend from images of wife
+
+* A classic example is working memory, which assumes pure insertion. That is that the addition of a working memory component to a task between perception and response does not change other aspects such as response execution.
+
+* Parametric manipulation where the amount of cognitive process varies in each condition. But this does not completely remove the assumption of pure insertion.
+
+---
+.left-column[
+## BOLD fMRI
+## Limitations and Considerations
+## fMRI Paradigms
+]
+.right-column[
+### Types of Neuroimaging Studies
+
+#### Reverse Inference
+
+* Claims to identify cognitive state from an activated brain region.
+
+* Key assumption is that a particular region is only activated by one state.
+
+#### Multi-voxel pattern analysis
+
+1. What is the difference in pattern across the brain or a region for a particular state or stimulus.
+2. Given a new statement or stimulus use the classifier from Step 1 to decode something new.
+
+* Key question is how well this generalises beyond the training set.
+]
+???
+
+* Participant is feeling pain as this region lights up
+
+* Test every other single possible stimuli?
+
+* Train participant on pictures of dogs and cats
+
+* Show them new pictures and based on brain pattern determine what they are looking at.
+---
+.left-column[
+## BOLD fMRI
+## Limitations and Considerations
+## fMRI Paradigms
+]
+.right-column[
+### Experimental Designs
+
+#### Block Designs
+
+* The HRF favours designs with power at low temporal frequencies.
+* However intrinsic noise at low frequencies is high.
+* Balancing noise and HRF has an optimal point of ~ 20 seconds.
+* This gives us a block design
+
+.center[<img src="resources/block.png" height=300>]
+.center[.imlabel[An event-related design]]
+]
+???
+* Changes in signal < about 4 seconds are basically undetectable in fMRI signal
+* Block design is optimal in terms of signal to noise ratio.
+---
+.left-column[
+## BOLD fMRI
+## Limitations and Considerations
+## fMRI Paradigms
+]
+.right-column[
+### Experimental Designs
+
+#### Event-related Designs
+
+* Some experimental question do not lend themselves to a block related design, especially those that need some randomisation
+* Timing between stimuli would ideally be varied. If this is not possible because of the research question then the timing should be different to TR so that events are out of phase with scans.
+
+.center[<img src="resources/event-related.png" width=450, height=300>]
+.center[.imlabel[A traditional block design]]
+]
+???
+* MMN as an example of suited to event-design and not possible to have varying SOA.
+* Rare events can be measured.
+* More trials are needed as MR signal is small.
+---
+.left-column[
+## BOLD fMRI
+## Limitations and Considerations
+## fMRI Paradigms
+]
+.right-column[
+### Experimental Designs
+
+### 3 Types of measures
+
+* BOLD fMRI amplitude - *Average direct effect of stimulus*
+* *Distributed Pattern Analysis*
+* *Within voxel adaptation*
+
+.center[<img src="resources/carry-measures.png" width=450, height=300>]
+.center[.imlabel[A traditional block design]]
+]
+???
+* Increase of amplitude in relation to contrast, particular object/stimulus
+* Patterns of voxel activation within group correlated, but between groups not correlated. Pattern of direct effects across voxels (not average)
+* Neurons have reduced response to repetition of stimulus. Neural adaptation studies, looking at modulatory effect of one stimulus on the next.
+---
+.left-column[
+## BOLD fMRI
+## Limitations and Considerations
+## fMRI Paradigms
+]
+.right-column[
+]
+???
 ---
 template: centred
 ## Final Discussion
 
 .uncentre[
-Proin sit amet erat iaculis, lobortis quam sit amet, tempor tellus. Integer nec rhoncus nulla. Duis dignissim dignissim justo, et sodales erat consectetur eget. Mauris augue neque, porttitor et condimentum a, interdum vitae sem. Proin laoreet dui eu placerat efficitur. In lacinia laoreet augue. Nunc vulputate nulla eget malesuada vulputate. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Curabitur maximus, neque in efficitur placerat, velit nibh vestibulum nunc, vitae laoreet augue augue ut nibh. Quisque et justo nec magna finibus cursus. Donec fringilla, nisl a faucibus fringilla, eros nisi lobortis massa, eu molestie neque lacus vel risus. Integer elementum massa eget porttitor pulvinar. Nulla tempor leo sed imperdiet egestas. Proin molestie ipsum et tellus facilisis, suscipit ultrices nulla ornare. Praesent dapibus lectus dolor, condimentum vulputate diam elementum a. Mauris porta et mi vitae dictum.
-
-Integer fringilla efficitur ex:
-
-* Fusce sit amet eros non ante finibus commodo. Sed elementum faucibus dui, ut ultrices sem commodo ut. Quisque id lacus viverra libero molestie malesuada ac at tellus. Nam sed ultrices nisl, sed varius justo. Duis sollicitudin, nisi non dignissim efficitur, dui velit egestas augue, eget euismod lectus nulla ac leo. In feugiat leo non purus interdum blandit sed non leo. Nullam congue rutrum sem, eget euismod metus vulputate a. Nam vitae pellentesque neque. Sed ultrices mauris neque, quis luctus nunc vehicula vitae. In posuere nec nibh a lobortis. Donec eu sollicitudin sem. Etiam eleifend, nunc eu iaculis finibus, ex eros faucibus purus, sed tempus leo sapien sed elit.
-
-* Maecenas ipsum mauris, semper feugiat libero et, tristique fringilla erat. Maecenas porta mi ut mi porta, eget sollicitudin enim porttitor. Mauris viverra posuere est, mollis egestas mauris tincidunt eget. Mauris aliquam bibendum libero ac sodales. Nullam sit amet sem vitae purus cursus ornare id eu ex. Morbi ut dapibus orci. Vestibulum ligula est, rutrum vestibulum risus et, varius facilisis eros. Donec et nunc vitae libero feugiat sodales. Suspendisse eu placerat nulla, eu lacinia metus. Cras convallis erat elit, ac egestas nulla pellentesque eu. Ut at mi consectetur, hendrerit orci sit amet, scelerisque ligula.
-
-* Nam tincidunt, arcu vel tristique pulvinar, mi eros imperdiet neque, ut elementum ante tortor sed neque. Nulla facilisis facilisis lorem, id scelerisque dolor lacinia quis. Duis eget purus placerat, posuere mauris vel, viverra quam. Curabitur vel diam congue, iaculis mi commodo, pretium purus. Suspendisse mattis ipsum justo, nec pharetra mauris facilisis vitae. Nam pulvinar, est quis scelerisque blandit, lacus turpis fringilla massa, quis aliquet metus nibh sit amet enim. Vestibulum posuere nibh quam, eget tempor dolor bibendum quis.
+Blah blah blah
 ]
 ---
 template: centred
