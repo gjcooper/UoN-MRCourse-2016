@@ -2,14 +2,25 @@ name: centred
 layout: true
 class: center, middle, inverse
 ---
-# Main Title Page
+# fMRI Paradigms
 ---
 ## Who Am I
+
+GAVIN COOPER
+
+Research Academic
+
+Centre for Brain and Mental Health Research
+
+Faculty of Health
+
+W: https://www.newcastle.edu.au/profile/gavin-cooper
+
 ---
 ## Outline
-### fMRI Paradigm Meaning and Setup
-### BOLD
-### methods
+### BOLD fMRI
+### Limitations and Considerations
+### fMRI Paradigms
 ### Complimentary sequences and clinical outcomes
 ---
 layout: true
@@ -17,16 +28,45 @@ name: columns
 class: inverse, middle
 ---
 .left-column[
-## Left column Header
+## BOLD fMRI
 ]
 .right-column[
-Donec luctus eu ex in ornare. Sed pulvinar, dolor ac posuere pellentesque, eros orci congue nisi, sit amet consequat libero urna ut nisi. Duis lacinia, diam eget lacinia luctus, tellus velit condimentum justo, quis suscipit justo sapien id quam. Cras sed risus magna. Donec aliquet nunc ipsum, ac sollicitudin dolor mattis vel. Sed consequat libero ut laoreet viverra. Aliquam sit amet pharetra enim, id sodales lacus. Maecenas malesuada consequat nisi ut porta. Quisque dignissim et justo a placerat. Curabitur pellentesque sagittis odio. Aenean quis dapibus sapien. In gravida congue ligula tincidunt condimentum. Nulla condimentum nec enim vel iaculis. Praesent dignissim viverra elit vitae commodo. Maecenas ultrices ultrices mi, eget tempus quam sodales vel.
+### The physics
 
-In consequat est pharetra aliquam volutpat. Praesent vitae dignissim magna. Vivamus eget tortor congue, ultricies erat a, lobortis mauris. Pellentesque vel lorem in quam tristique egestas. Etiam ornare velit turpis, eu euismod metus lobortis ac. Proin egestas metus magna, malesuada egestas lorem venenatis in. Aenean velit lorem, molestie eu lectus quis, dictum fringilla purus. Vestibulum eget eros hendrerit, sollicitudin tellus sed, vestibulum risus. Nullam sed maximus erat. Donec vitae odio tincidunt, venenatis diam dignissim, vulputate ipsum.
+T2\* is used in functional MRI. It is a measure of the component that does not rephase after a 180 degree RF pulse.
 
-Duis accumsan consectetur mi, vitae hendrerit leo molestie aliquet. Praesent maximus diam a tellus rhoncus aliquam. Aliquam dapibus condimentum faucibus. Maecenas finibus mi velit, ut iaculis libero facilisis eu. Proin porta risus sit amet erat faucibus mollis. Nullam quis blandit felis, ac consequat dolor. Nam justo ipsum, luctus in dolor ac, pulvinar semper ante. Nunc sollicitudin at erat non luctus. Nulla malesuada odio a vulputate laoreet. Cras dictum ex et lacus mollis, in eleifend justo vehicula. Nam at ante condimentum, dictum libero eu, scelerisque nisi. Cras hendrerit elit et posuere tristique. Aenean vestibulum, sem et aliquam malesuada, tellus quam euismod magna, vitae imperdiet leo arcu eget velit. Duis in egestas augue. Phasellus vel turpis lorem.
+.center[<img src="resources/T2.png" width=600, height=450>]
+.imlabel[T2 & T2\* relaxation processes. Source: [jcmr-online](http://www.jcmr-online.com/content/12/1/71/figure/F4)]
 ]
+???
+* First RF pulse puts all proton spins in phase.
+* As they de-phase (relax) they are hit with a second RF pulse at 180 degrees.
+* This flips the fields over and causes them to begin to re-phase.
+* The portion that does not re-phase due to microscopic distortions of the magnetic field creates our T2\* signal
 ---
+.left-column[
+## BOLD fMRI
+]
+.right-column[
+### The biology
+
+* One source of these microscopic distortions is blood, which gives gives us BOLD fMRI.
+* BOLD is due to oxygen attached to hemoglobin.
+* The brain efficently delivers oxygenated blood to parts of the brain with a higher energy budget (ie activity), which results in blood vessels increasing in size.
+
+.center[<img src="resources/arteries.png" width=353, height=325>]
+.imlabel[A view of the main arteries from below the brain]
+]
+
+???
+
+* Oxygenated and deoxygenated hemoglobin have different magnetic properties.
+* So we have:
+  * Activity
+  * Increased blood vessel size
+  * More deoxyhemoglobin
+  * Change in magnetic local properties as measured by T2\*
+  * Image
 ---
 template: centred
 ### Sample Image
