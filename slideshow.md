@@ -33,10 +33,29 @@ class: inverse, middle
 
 T2\* is used in functional MRI. It is a measure of the component that does not re-phase after a 180 degree RF pulse.
 
-.center[<img src="resources/T2.png" width=600, height=450>]
-.center[.imlabel[T2 & T2\* relaxation processes. Source: [jcmr-online](http://www.jcmr-online.com/content/12/1/71/figure/F4)]]
+.center[<img src="resources/rotateproton.gif" width=500, height=400>]
+.center[.imlabel[Proton rotating in magnetic field]]
 ]
 ???
+* Protons rotate on their axis in the magnetic field.
+* First RF pulse puts all proton spins in phase.
+* As they de-phase (relax) they are hit with a second RF pulse at 180 degrees.
+* This flips the fields over and causes them to begin to re-phase.
+* The portion that does not re-phase due to microscopic distortions of the magnetic field creates our T2\* signal
+---
+.left-column[
+## BOLD fMRI
+]
+.right-column[
+### The physics
+
+T2\* is used in functional MRI. It is a measure of the component that does not re-phase after a 180 degree RF pulse.
+
+.center[<img src="resources/rotateproton.png" width=500, height=400>]
+.center[.imlabel[Proton rotating in magnetic field]]
+]
+???
+* Protons rotate on their axis in the magnetic field.
 * First RF pulse puts all proton spins in phase.
 * As they de-phase (relax) they are hit with a second RF pulse at 180 degrees.
 * This flips the fields over and causes them to begin to re-phase.
