@@ -513,7 +513,6 @@ T2\* relaxation is used in functional MRI. It is a measure of the component that
 .center[.imlabel[An event-related design]]
 ]
 ???
-* Changes in signal < about 4 seconds are basically undetectable in fMRI signal
 * Block design is optimal in terms of signal to noise ratio.
 ---
 .left-column[
@@ -579,7 +578,7 @@ T2\* relaxation is used in functional MRI. It is a measure of the component that
 * Direct effect corresponds to distributed pattern analysis and influence of prior stimulus is within voxel neural adaptation
 
 * Types of modulatory effects:
-  * Neural adaptation, linear adaptation, has property that it's symmetric (A colour that is one shade darker effects brain same way as one shade lighter.)
+  * Neural adaptation, linear adaptation, has property that it's symmetric (A slightly darker and lighter colour will effect the subsequent brain response the same way no matter the order they were presented)
   * Bias effects, asymmetric (Influence of neutral face in subsequent angry face is different to the effect of an angry face on a subsequent neutral face)
 ---
 .left-column[
@@ -597,14 +596,14 @@ T2\* relaxation is used in functional MRI. It is a measure of the component that
 
 * EEG can be acquired to increase time resolution
 
-* Plus eyetracking, physiological measures, transcranial magnetic stimulation and more
+* Plus eye tracking, physiological measures, transcranial magnetic stimulation and more
 ]
 ???
 * Structural image enables you to overlay results on high resolution image to more easily locate regions activated by the task. It also makes normalisation between subjects much more accurate.
 
 * DIFFUSION TENSOR IMAGING - Tractography seed regions can be created in a subject specific way using the results of fMRI data analysis.
 
-* Electroencephalogram can be either acquired separately (harder to correlate data) or silmultaneously (noise from MR in EEG and vice versa)
+* Electroencephalogram can be either acquired separately (harder to correlate data) or simultaneously (noise from MR in EEG and vice versa)
 ---
 .left-column[
 ## BOLD fMRI
@@ -619,7 +618,7 @@ T2\* relaxation is used in functional MRI. It is a measure of the component that
 
 * Idea is to map the brain for critical functions like verbal, motor , sensory and executive function.
 
-* Assessment of the effects of stroke, tumors etc can also be performed.
+* Assessment of the effects of stroke, tumours for example can also be performed.
 
 ]
 ???
@@ -631,7 +630,7 @@ template: centred
 * Other fMRI techniques and paradigms exist such as Perfusion fMRI and resting state fMRI.
 ]
 ???
-* Perfusion fMRI - Instead of oxygenated/deoxygenated blood flow. Tag protons inflowing to brain (in neck), and after delay readout effect of label in brain. Alternating images with/without tagging to get differences. Differencing removes intrinsic noise. Very good at measuring slow changes in neural signal.
+* Perfusion fMRI - Instead of oxygenated/de-oxygenated blood flow. Tag protons inflowing to brain (in neck), and after delay readout effect of label in brain. Alternating images with/without tagging to get differences. Differencing removes intrinsic noise. Very good at measuring slow changes in neural signal.
 
 * Resting State fMRI - Used to look at regional interactions in the brain when the subject is not performing an explicit task. Particularly sensitive to physiological noise. 
 ---
@@ -663,7 +662,7 @@ template: centred
 * Things researchers can do for radiographers.
 ]
 ???
-* Have a clear idea of what you want to achieve with your sequence, but involve the radiographers early in the piece so that you aer working with the capabilities of the scanner.
+* Have a clear idea of what you want to achieve with your sequence, but involve the radiographers early in the piece so that you are working with the capabilities of the scanner.
 
 * Have participants arrive with plenty of time and if possible backup plans for no-shows.
 
