@@ -510,7 +510,7 @@ T2\* relaxation is used in functional MRI. It is a measure of the component that
 * This gives us a block design
 
 .center[<img src="resources/block.png" height=300>]
-.center[.imlabel[An event-related design]]
+.center[.imlabel[A traditional block design]]
 ]
 ???
 * Block design is optimal in terms of signal to noise ratio.
@@ -529,7 +529,7 @@ T2\* relaxation is used in functional MRI. It is a measure of the component that
 * Timing between stimuli would ideally be varied. If this is not possible because of the research question then the timing should be different to TR so that events are out of phase with scans.
 
 .center[<img src="resources/event-related.png" width=450, height=300>]
-.center[.imlabel[A traditional block design]]
+.center[.imlabel[An event-related design]]
 ]
 ???
 * MMN as an example of suited to event-design and not possible to have varying SOA.
